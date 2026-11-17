@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RBS Metalúrgica – Metalurgia para cidades, condomínios e empresas</title>
+<meta name="description" content="A RBS Metalúrgica fabrica soluções metálicas sob medida para mobiliário urbano, condomínios, residências e empresas. Solicite seu orçamento pelo WhatsApp.">
+<link rel="icon" type="image/png" href="imagens/logo/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#1D2E3C; --copper:#CA9675; --bg:#111B24; --surface:#243744; --white:#F5F7F8; --gray:#C3CDD5; --page:#F5F7F8; --text:#1D2E3C; --muted:#4A5B69; --line:#D3DAE0; --band:#1D2E3C; --band-text:#F5F7F8; --ph:#E6EBEF; --ph-border:#9AA9B5; --field:#fff; --field-border:#8796a3; --focus:#1D2E3C;
+  color-scheme:light; box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:auto}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--text);font:400 1.0625rem/1.65 Inter,system-ui,sans-serif}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:Montserrat,system-ui,sans-serif;font-weight:600;margin:0;line-height:1.15}
+h1{font-size:clamp(2.1rem,5.6vw,3.7rem);letter-spacing:-.015em}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:.5rem}
+h3{font-size:1.3rem}
+p{margin:0 0 1rem}
+a{color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.access a:focus-visible,.about a:focus-visible,footer a:focus-visible{outline-color:var(--copper)}
+
+.btn{display:inline-block;border:0;cursor:pointer;background:var(--copper);color:var(--blue);font:600 1rem/1 Montserrat,sans-serif;
+  padding:1rem 1.5rem;border-radius:4px;text-decoration:none}
+.btn:hover{background:#d8a98a}
+
+header{padding:1rem 0;display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center;justify-content:space-between}
+.logo{display:block;line-height:0}
+.logo img{height:3rem;width:auto;display:block}
+.menu-toggle{display:none;align-items:center;justify-content:center;gap:.55rem;min-height:2.75rem;padding:.65rem .9rem;border:1px solid var(--line);border-radius:4px;background:#fff;color:var(--blue);font:600 .95rem/1 Inter,system-ui,sans-serif;cursor:pointer}
+.menu-toggle svg{width:1.25rem;height:1.25rem;display:block}
+nav{display:flex;flex-wrap:wrap;align-items:center;gap:.25rem 1.5rem}
+nav a{color:var(--text);text-decoration:none;padding:.4rem 0;border-bottom:2px solid transparent}
+nav a:hover{border-bottom-color:var(--copper)}
+@media(max-width:47.99rem){
+  header{gap:.75rem 1rem}
+  .menu-toggle{display:inline-flex}
+  nav{display:none;flex:0 0 100%;width:100%;flex-direction:column;align-items:stretch;gap:0;padding:.35rem .9rem;background:#fff;border:1px solid var(--line);border-left:4px solid var(--copper);box-shadow:0 8px 20px rgba(29,46,60,.10)}
+  nav.is-open{display:flex}
+  nav a{display:block;padding:.8rem .15rem;border-bottom:1px solid var(--line)}
+  nav a:last-child{border-bottom:0}
+  nav a:hover{border-bottom-color:var(--line);color:#8d5e43}
+}
+
+.hero{display:grid;gap:2.5rem;padding:2.5rem 0 3.5rem;align-items:center}
+.hero p{color:var(--muted);font-size:1.15rem;max-width:30rem}
+.hero h1{margin-bottom:1.5rem}
+.photo{position:relative;aspect-ratio:4/3;background:var(--ph);display:flex;align-items:center;justify-content:center;
+  text-align:center;padding:1rem;color:var(--muted);border:2px dashed var(--ph-border)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .photo{box-shadow:14px 14px 0 var(--copper);margin:0 14px 14px 0;border:0}
+.hero > div > p:not(.hero-note){margin-bottom:.75rem}
+.hero > div > p.hero-note{margin:.5rem 0 0;font-size:0.85rem;color:var(--muted);line-height:1.4}
+@media(min-width:48rem){.hero{grid-template-columns:1.1fr 1fr}}
+
+.access{display:grid;gap:1rem;margin-bottom:4.5rem}
+.access a{display:block;background:var(--band);color:var(--band-text);padding:2rem 1.75rem;text-decoration:none;border-left:8px solid var(--copper);min-height:11rem}
+.access a:hover{filter:brightness(1.18)}
+.access h2{font-size:1.9rem;margin-bottom:.6rem}
+.access span{color:var(--gray);display:block;max-width:26rem}
+@media(min-width:48rem){.access{grid-template-columns:1fr 1fr}}
+
+.group{padding-bottom:4.5rem}
+.group > .wrap > p{color:var(--muted);max-width:36rem;margin-bottom:2rem}
+.cat{display:grid;gap:1.25rem;padding:1.75rem 0;border-top:1px solid var(--line)}
+.cat p{color:var(--muted);max-width:24rem}
+.cat .btn{padding:.85rem 1.2rem}
+.car{position:relative;background:var(--ph)}
+.track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;aspect-ratio:3/2;-webkit-overflow-scrolling:touch}
+.track::-webkit-scrollbar{display:none}
+.track:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.slide{flex:0 0 100%;scroll-snap-align:center;scroll-snap-stop:always;position:relative;margin:0;overflow:hidden}
+.slide .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(22px);transform:scale(1.15);opacity:.5}
+.slide .fg{position:relative;display:block;width:100%;height:100%;object-fit:contain}
+.nav{position:absolute;top:50%;transform:translateY(-50%);width:3rem;height:3rem;border-radius:50%;border:0;background:var(--blue);color:#fff;cursor:pointer;display:grid;place-items:center;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.nav:hover{background:#2c4455}
+.nav:disabled{opacity:.35;cursor:default}
+.nav:focus-visible{outline:3px solid var(--copper);outline-offset:2px}
+.prev{left:.6rem}.next{right:.6rem}
+.count{position:absolute;right:.6rem;bottom:.6rem;background:var(--blue);color:var(--white);font:500 .85rem/1 Inter,system-ui,sans-serif;padding:.4rem .65rem;border-radius:3px}
+@media(max-width:47.99rem){.track{aspect-ratio:4/3}.nav{width:2.6rem;height:2.6rem}}
+@media(min-width:48rem){.cat{grid-template-columns:19rem 1fr;gap:2.5rem}}
+
+.about{background:var(--band);color:var(--band-text);padding:4rem 0}
+.about p{font-size:1.2rem;max-width:36rem}
+
+.quote{padding:4rem 0}
+form{display:grid;gap:1.1rem;max-width:36rem;margin-top:1.5rem}
+label{display:grid;gap:.4rem;font-weight:500}
+input,textarea{font:inherit;color:var(--text);background:var(--field);border:1px solid var(--field-border);border-radius:4px;padding:.8rem .9rem;width:100%}
+textarea{min-height:7.5rem;resize:vertical}
+.status{min-height:1.5rem;color:var(--muted)}
+.status a{color:var(--text);text-decoration:underline}
+
+footer{background:var(--band);padding:2rem 0 6rem;color:var(--gray)}
+footer a{color:var(--white)}
+.foot{display:grid;gap:1.25rem}
+.foot p{margin:0 0 .5rem}
+@media(min-width:48rem){.foot{grid-template-columns:1fr 1.2fr 1.3fr;gap:2rem}}
+
+.fab{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:5;box-shadow:0 3px 14px rgba(0,0,0,.5)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+#hero-photo{overflow:hidden}
+#hero-photo .bg{object-fit:cover;filter:blur(22px);transform:scale(1.25);opacity:.55}
+#hero-photo .fg{object-fit:scale-down;}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="#topo" aria-label="RBS Metalúrgica, início"><img src="imagens/logo/rbs-logo.png" alt="RBS Metalúrgica" width="164" height="48"></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu de navegação">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>Menu</span>
+    </button>
+    <nav id="menu-principal" aria-label="Principal">
+      <a href="#mobiliario">Mobiliário Urbano</a>
+      <a href="#condominios">Condomínios</a>
+      <a href="#empresas">Empresas</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#orcamento">Orçamento</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main id="topo">
+    <div class="hero">
+      <div>
+        <h1>Soluções em metalurgia para cidades, condomínios e empresas.</h1>
+        <p>Fabricamos sob medida e atendemos pedidos de orçamento direto pelo WhatsApp.</p>
+        <a class="btn" href="#orcamento">Solicitar orçamento</a>
+        <p class="hero-note">
+          Preencha o formulário para enviar sua solicitação pelo WhatsApp.
+        </p>
+      </div>
+
+      <div class="photo" id="hero-photo">
+        <img class="bg" src="imagens/destaque/destaque2.jpeg" alt="" aria-hidden="true">
+        <img class="fg" src="imagens/destaque/destaque2.jpeg" alt="Abrigo de ponto de ônibus fabricado pela RBS Metalúrgica" fetchpriority="high">
+      </div>
+    </div>
+
+    <div class="access">
+      <a href="#mobiliario"><h2>Mobiliário Urbano</h2><span>Abrigos, ecopontos, bancos, bicicletários, playgrounds e equipamentos para quadras.</span></a>
+      <a href="#condominios"><h2>Condomínios</h2><span>Portões, guarda-corpos, grades, abrigos e coberturas metálicas.</span></a>
+    </div>
+  </main>
+</div>
+
+<section class="group" id="mobiliario">
+  <div class="wrap">
+    <h2>Mobiliário Urbano</h2>
+    <p>Estruturas metálicas para espaços públicos, fabricadas conforme o projeto.</p>
+    <div id="lista-urbano"></div>
+  </div>
+</section>
+
+<section class="group" id="condominios">
+  <div class="wrap">
+    <h2>Condomínios</h2>
+    <p>Soluções metálicas para áreas comuns, entradas, garagens e residências.</p>
+    <div id="lista-cond"></div>
+  </div>
+</section>
+
+<section class="group" id="empresas">
+  <div class="wrap">
+    <h2>Empresas e outros produtos</h2>
+    <p>Produtos metálicos para empresas, indústrias e residências.</p>
+    <div id="lista-outros"></div>
+  </div>
+</section>
+
+<section class="about" id="sobre">
+  <div class="wrap">
+    <h2>Sobre a empresa</h2>
+    <p>Há 16 anos no mercado, a RBS Metalúrgica oferece soluções metálicas sob medida, unindo resistência, funcionalidade e qualidade no acabamento.</p>
+    <p>Atendemos clientes particulares, condomínios e empresas com serviços de fabricação e instalação. Também atuamos em licitações para órgãos públicos e somos especializados na execução de contrapartidas para empresas, incluindo estruturas metálicas e mobiliário urbano.</p>
+    <p>Nosso compromisso é atender às necessidades de cada projeto, com atenção aos detalhes e responsabilidade em todas as etapas, do planejamento à entrega.</p>
+  </div>
+</section>
+
+<section class="quote" id="orcamento">
+  <div class="wrap">
+    <h2>Solicite seu orçamento</h2>
+    <p>Preencha os dados e abriremos o WhatsApp com sua mensagem pronta.</p>
+    <form id="form" novalidate>
+      <label>Nome<input name="nome" autocomplete="name" required></label>
+      <label>Telefone<input name="tel" type="tel" autocomplete="tel" inputmode="tel" required></label>
+      <label>Cidade<input name="cidade" autocomplete="address-level2" required></label>
+      <label>Descrição do pedido<textarea name="pedido" required></textarea></label>
+      <button class="btn" type="submit">Enviar pelo WhatsApp</button>
+      <div class="status" id="status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+<footer id="contato">
+  <div class="wrap foot">
+    <div>
+      <p><strong>RBS Metalúrgica</strong></p>
+      <p>CNPJ 13.054.729/0001-92</p>
+    </div>
+    <div>
+      <p>Rua Rio Solimões, 836 – Weissópolis<br>Pinhais – PR, CEP 83322-150</p>
+      <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Rio+Solim%C3%B5es+836+Weiss%C3%B3polis+Pinhais+PR" target="_blank" rel="noopener">Ver no mapa</a></p>
+    </div>
+    <div>
+      <p>WhatsApp: <a data-wa data-msg="Olá! Vim pelo site." href="#">(41) 99189-6262</a></p>
+      <p>E-mail: <a href="mailto:rbsmetalurgica6@gmail.com">rbsmetalurgica6@gmail.com</a></p>
+    </div>
+  </div>
+</footer>
+
+<a class="btn fab" data-wa data-msg="Olá! Vim pelo site e gostaria de falar com a RBS Metalúrgica." href="#" aria-label="Falar no WhatsApp">Falar no WhatsApp</a>
+
+<script>
+/* Para trocar o número, edite aqui (55 + DDD + número, só dígitos). */
+var NUMERO = "5541991896262";
+function wa(msg){ return "https://wa.me/" + NUMERO + "?text=" + encodeURIComponent(msg); }
+
+/* Cada categoria lista suas fotos em "fotos". */
+var URBANO = [{"nome": "Pontos de ônibus e abrigos", "desc": "Abrigos metálicos para pontos de parada, feitos sob medida.", "fotos": ["imagens/mobiliario-urbano/pontos-de-onibus-e-abrigos/pontos-de-onibus-e-abrigos-01.jpg", "imagens/mobiliario-urbano/pontos-de-onibus-e-abrigos/pontos-de-onibus-e-abrigos-02.jpg", "imagens/mobiliario-urbano/pontos-de-onibus-e-abrigos/pontos-de-onibus-e-abrigos-03.jpg", "imagens/mobiliario-urbano/pontos-de-onibus-e-abrigos/pontos-de-onibus-e-abrigos-04.jpg", "imagens/mobiliario-urbano/pontos-de-onibus-e-abrigos/pontos-de-onibus-e-abrigos-05.jpg", "imagens/mobiliario-urbano/pontos-de-onibus-e-abrigos/pontos-de-onibus-e-abrigos-06.jpg"]}, {"nome": "Ecopontos", "desc": "Estruturas metálicas para coleta e descarte organizado.", "fotos": ["imagens/mobiliario-urbano/ecopontos/ecopontos-01.jpg", "imagens/mobiliario-urbano/ecopontos/ecopontos-02.jpg", "imagens/mobiliario-urbano/ecopontos/ecopontos-03.jpg", "imagens/mobiliario-urbano/ecopontos/ecopontos-04.jpg"]}, {"nome": "Lixeiras urbanas e containers", "desc": "Lixeiras e containers metálicos para vias e espaços públicos.", "fotos": ["imagens/mobiliario-urbano/lixeiras-urbanas-e-containers/lixeiras-urbanas-e-containers-01.jpg", "imagens/mobiliario-urbano/lixeiras-urbanas-e-containers/lixeiras-urbanas-e-containers-02.jpg", "imagens/mobiliario-urbano/lixeiras-urbanas-e-containers/lixeiras-urbanas-e-containers-03.jpg", "imagens/mobiliario-urbano/lixeiras-urbanas-e-containers/lixeiras-urbanas-e-containers-04.jpg", "imagens/mobiliario-urbano/lixeiras-urbanas-e-containers/lixeiras-urbanas-e-containers-05.jpg"]}, {"nome": "Bancos de praça", "desc": "Bancos metálicos para praças e áreas de convivência.", "fotos": ["imagens/mobiliario-urbano/bancos-de-praca/bancos-de-praca-01.jpg", "imagens/mobiliario-urbano/bancos-de-praca/bancos-de-praca-02.jpg", "imagens/mobiliario-urbano/bancos-de-praca/bancos-de-praca-03.jpg"]}, {"nome": "Bicicletários", "desc": "Estruturas para guardar e prender bicicletas.", "fotos": ["imagens/mobiliario-urbano/bicicletarios/bicicletarios-01.jpg", "imagens/mobiliario-urbano/bicicletarios/bicicletarios-02.jpg", "imagens/mobiliario-urbano/bicicletarios/bicicletarios-03.jpg", "imagens/mobiliario-urbano/bicicletarios/bicicletarios-04.jpg"]}, {"nome": "Playgrounds", "desc": "Brinquedos e estruturas metálicas para áreas de lazer.", "fotos": ["imagens/mobiliario-urbano/playgrounds/playgrounds-01.jpg", "imagens/mobiliario-urbano/playgrounds/playgrounds-02.jpg", "imagens/mobiliario-urbano/playgrounds/playgrounds-03.jpg", "imagens/mobiliario-urbano/playgrounds/playgrounds-04.jpg", "imagens/mobiliario-urbano/playgrounds/playgrounds-05.jpg", "imagens/mobiliario-urbano/playgrounds/playgrounds-06.jpg"]}, {"nome": "Equipamentos para quadras", "desc": "Traves, tabelas e alambrados para quadras esportivas.", "fotos": ["imagens/mobiliario-urbano/equipamentos-para-quadras/equipamentos-para-quadras-01.jpg", "imagens/mobiliario-urbano/equipamentos-para-quadras/equipamentos-para-quadras-02.jpg", "imagens/mobiliario-urbano/equipamentos-para-quadras/equipamentos-para-quadras-03.jpg", "imagens/mobiliario-urbano/equipamentos-para-quadras/equipamentos-para-quadras-04.jpg", "imagens/mobiliario-urbano/equipamentos-para-quadras/equipamentos-para-quadras-05.jpg"]}];
+var COND = [{"nome": "Lixeiras e abrigos de resíduos", "desc": "Abrigos e lixeiras metálicas para áreas de resíduos.", "fotos": ["imagens/condominios/lixeiras-e-abrigos-de-residuos/lixeiras-e-abrigos-de-residuos-01.jpg", "imagens/condominios/lixeiras-e-abrigos-de-residuos/lixeiras-e-abrigos-de-residuos-02.jpg", "imagens/condominios/lixeiras-e-abrigos-de-residuos/lixeiras-e-abrigos-de-residuos-03.jpg", "imagens/condominios/lixeiras-e-abrigos-de-residuos/lixeiras-e-abrigos-de-residuos-04.jpg", "imagens/condominios/lixeiras-e-abrigos-de-residuos/lixeiras-e-abrigos-de-residuos-05.jpg", "imagens/condominios/lixeiras-e-abrigos-de-residuos/lixeiras-e-abrigos-de-residuos-06.jpg"]}, {"nome": "Portões", "desc": "Portões sob medida para entradas e garagens.", "fotos": ["imagens/condominios/portoes/portoes-01.jpg", "imagens/condominios/portoes/portoes-02.jpg", "imagens/condominios/portoes/portoes-03.jpg", "imagens/condominios/portoes/portoes-04.jpg", "imagens/condominios/portoes/portoes-05.jpg", "imagens/condominios/portoes/portoes-06.jpg"]}, {"nome": "Guarda-corpos e corrimãos", "desc": "Proteção e apoio para escadas, rampas e varandas.", "fotos": ["imagens/condominios/guarda-corpos-e-corrimaos/guarda-corpos-e-corrimaos-01.jpg", "imagens/condominios/guarda-corpos-e-corrimaos/guarda-corpos-e-corrimaos-02.jpg", "imagens/condominios/guarda-corpos-e-corrimaos/guarda-corpos-e-corrimaos-03.jpg", "imagens/condominios/guarda-corpos-e-corrimaos/guarda-corpos-e-corrimaos-04.jpg", "imagens/condominios/guarda-corpos-e-corrimaos/guarda-corpos-e-corrimaos-05.jpg", "imagens/condominios/guarda-corpos-e-corrimaos/guarda-corpos-e-corrimaos-06.jpg"]}, {"nome": "Grades e telas de proteção", "desc": "Grades e telas para segurança e fechamento de áreas.", "fotos": ["imagens/condominios/grades-e-telas-de-protecao/grades-e-telas-de-protecao-01.jpg", "imagens/condominios/grades-e-telas-de-protecao/grades-e-telas-de-protecao-02.jpg"]}, {"nome": "Bicicletários", "desc": "Estruturas para guardar e prender bicicletas.", "fotos": ["imagens/condominios/bicicletarios/bicicletarios-01.jpg", "imagens/condominios/bicicletarios/bicicletarios-02.jpg", "imagens/condominios/bicicletarios/bicicletarios-03.jpg"]}, {"nome": "Abrigos de gás", "desc": "Abrigos metálicos para botijões e centrais de gás.", "fotos": ["imagens/condominios/abrigos-de-gas/abrigos-de-gas-01.jpg", "imagens/condominios/abrigos-de-gas/abrigos-de-gas-02.jpg", "imagens/condominios/abrigos-de-gas/abrigos-de-gas-03.jpg", "imagens/condominios/abrigos-de-gas/abrigos-de-gas-04.jpg", "imagens/condominios/abrigos-de-gas/abrigos-de-gas-05.jpg"]}, {"nome": "Coberturas metálicas", "desc": "Coberturas residenciais e de estacionamento.", "fotos": ["imagens/condominios/coberturas-metalicas/coberturas-metalicas-01.jpg", "imagens/condominios/coberturas-metalicas/coberturas-metalicas-02.jpg", "imagens/condominios/coberturas-metalicas/coberturas-metalicas-03.jpg", "imagens/condominios/coberturas-metalicas/coberturas-metalicas-04.jpg", "imagens/condominios/coberturas-metalicas/coberturas-metalicas-05.jpg"]}];
+var OUTROS = [{"nome": "Toldos em lona", "desc": "Toldos com estrutura metálica e cobertura em lona.", "fotos": ["imagens/empresas/toldos-em-lona/toldos-em-lona-01.jpg", "imagens/empresas/toldos-em-lona/toldos-em-lona-02.jpg", "imagens/empresas/toldos-em-lona/toldos-em-lona-03.jpg", "imagens/empresas/toldos-em-lona/toldos-em-lona-04.jpg", "imagens/empresas/toldos-em-lona/toldos-em-lona-05.jpg"]}, {"nome": "Treliças", "desc": "Treliças metálicas para coberturas e estruturas.", "fotos": ["imagens/empresas/trelicas/trelicas-01.jpg", "imagens/empresas/trelicas/trelicas-02.jpg", "imagens/empresas/trelicas/trelicas-03.jpg", "imagens/empresas/trelicas/trelicas-04.jpg"]}, {"nome": "Escadas industriais", "desc": "Escadas móveis em aço para uso industrial.", "fotos": ["imagens/empresas/escadas-industriais/escadas-industriais-01.jpg", "imagens/empresas/escadas-industriais/escadas-industriais-02.jpg", "imagens/empresas/escadas-industriais/escadas-industriais-03.jpg"]}, {"nome": "Carrinhos industriais", "desc": "Carrinhos de carga em estrutura metálica.", "fotos": ["imagens/empresas/carrinhos-industriais/carrinhos-industriais-01.jpg", "imagens/empresas/carrinhos-industriais/carrinhos-industriais-02.jpg", "imagens/empresas/carrinhos-industriais/carrinhos-industriais-03.jpg", "imagens/empresas/carrinhos-industriais/carrinhos-industriais-04.jpg"]}, {"nome": "Canil metálico", "desc": "Canil em estrutura metálica e tela.", "fotos": ["imagens/empresas/canil-metalico/canil-metalico-01.jpg"]}];
+
+function esc(s){ var d=document.createElement("div"); d.textContent=s; return d.innerHTML; }
+var CHEV = {
+  l:'<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  r:'<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+};
+function render(id, grupo, itens){
+  document.getElementById(id).innerHTML = itens.map(function(c){
+    var n = c.fotos.length, car;
+    if(n){
+      car = '<div class="car" role="group" aria-roledescription="carrossel" aria-label="Fotos de '+esc(c.nome)+'"><div class="track" tabindex="0">'
+        + c.fotos.map(function(f,i){
+            return '<figure class="slide" aria-label="Foto '+(i+1)+' de '+n+'"><img class="bg" src="'+f+'" alt="" aria-hidden="true" loading="lazy" decoding="async"><img class="fg" src="'+f+'" alt="'+esc(c.nome)+' – RBS Metalúrgica, foto '+(i+1)+'" loading="lazy" decoding="async"></figure>';
+          }).join("")
+        + '</div>'
+        + (n > 1 ? '<button class="nav prev" type="button" aria-label="Foto anterior">'+CHEV.l+'</button><button class="nav next" type="button" aria-label="Próxima foto">'+CHEV.r+'</button><div class="count" aria-live="polite">1 / '+n+'</div>' : '')
+        + '</div>';
+    } else {
+      car = '<div class="photo"><span>Fotos em breve</span></div>';
+    }
+    var msg = "Olá! Gostaria de um orçamento de: " + c.nome + ".\n\n(" + grupo + ")";
+    return '<article class="cat"><div><h3>'+esc(c.nome)+'</h3><p>'+esc(c.desc)+'</p>'
+      + '<a class="btn" data-wa data-msg="'+esc(msg)+'" href="#">Solicitar orçamento</a></div>'+car+'</article>';
+  }).join("");
+}
+render("lista-urbano", "Mobiliário Urbano", URBANO);
+render("lista-cond", "Condomínios", COND);
+render("lista-outros", "Empresas e outros produtos", OUTROS);
+
+/* Menu responsivo: abre/fecha no celular e recolhe após selecionar uma seção. */
+(function(){
+  var botao = document.querySelector(".menu-toggle");
+  var menu = document.getElementById("menu-principal");
+  if(!botao || !menu) return;
+
+  function fecharMenu(){
+    menu.classList.remove("is-open");
+    botao.setAttribute("aria-expanded", "false");
+    botao.setAttribute("aria-label", "Abrir menu de navegação");
+  }
+
+  function alternarMenu(){
+    var aberto = botao.getAttribute("aria-expanded") === "true";
+    if(aberto){
+      fecharMenu();
+    } else {
+      menu.classList.add("is-open");
+      botao.setAttribute("aria-expanded", "true");
+      botao.setAttribute("aria-label", "Fechar menu de navegação");
+    }
+  }
+
+  botao.addEventListener("click", alternarMenu);
+  menu.querySelectorAll("a").forEach(function(link){
+    link.addEventListener("click", fecharMenu);
+  });
+  document.addEventListener("keydown", function(event){
+    if(event.key === "Escape") fecharMenu();
+  });
+  window.addEventListener("resize", function(){
+    if(window.matchMedia("(min-width: 48rem)").matches) fecharMenu();
+  });
+})();
+
+document.querySelectorAll(".car").forEach(function(car){
+  var tr = car.querySelector(".track"), p = car.querySelector(".prev"), nx = car.querySelector(".next"), ct = car.querySelector(".count");
+  if(!p) return;
+  var n = tr.children.length, t;
+  function atual(){ return Math.round(tr.scrollLeft / tr.clientWidth); }
+  function atualizar(){ var i = Math.min(Math.max(atual(),0), n-1); ct.textContent = (i+1) + " / " + n; p.disabled = i <= 0; nx.disabled = i >= n-1; }
+  function ir(d){
+    var b = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+    tr.scrollTo({left:(atual()+d)*tr.clientWidth, behavior:b});
+  }
+  p.addEventListener("click", function(){ ir(-1); });
+  nx.addEventListener("click", function(){ ir(1); });
+  tr.addEventListener("scroll", function(){ clearTimeout(t); t = setTimeout(atualizar, 60); }, {passive:true});
+  window.addEventListener("resize", atualizar);
+  atualizar();
+});
+
+document.querySelectorAll("[data-wa]").forEach(function(a){
+  a.href = wa(a.getAttribute("data-msg") || "Olá! Vim pelo site.");
+  a.target = "_blank"; a.rel = "noopener";
+});
+
+document.getElementById("form").addEventListener("submit", function(e){
+  e.preventDefault();
+  var f = e.target, st = document.getElementById("status");
+  var v = function(n){ return f.elements[n].value.trim(); };
+  if(!v("nome") || !v("tel") || !v("cidade") || !v("pedido")){
+    st.textContent = "Preencha nome, telefone, cidade e a descrição do pedido.";
+    return;
+  }
+  var msg = "Olá! Gostaria de solicitar um orçamento com a RBS Metalúrgica. \n\n" + 
+            "*Meus dados:*\n" +
+            "Nome: " + v("nome") + "\n" +
+            "Telefone: " + v("tel") + "\n" +
+            "Cidade: " + v("cidade") + "\n\n" +
+            "*Detalhes da solicitação:*\n" +
+            v("pedido");
+
+  var url = wa(msg);
+  st.innerHTML = 'Abrindo o WhatsApp. Se não abrir, <a href="'+url+'" target="_blank" rel="noopener">toque aqui</a>.';
+  window.open(url, "_blank", "noopener");
+});
+
+</script>
+</body>
+</html>
